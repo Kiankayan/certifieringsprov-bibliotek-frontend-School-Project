@@ -141,7 +141,7 @@ function LibraryItemList({
               <>
                 <h2>
                   {showAbbreviations
-                    ? getTitleAbbreviation(item.title)
+                    ? `${item.title} (${getTitleAbbreviation(item.title)})`
                     : item.title}
                 </h2>
 
