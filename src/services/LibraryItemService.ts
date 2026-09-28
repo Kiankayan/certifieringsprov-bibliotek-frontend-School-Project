@@ -2,7 +2,7 @@ import type { LibraryItem } from "../types/library";
 import axios from "axios";
 
 const API_BASEURL =
-  "https://certifieringsprov-bibliotek-backend.onrender.com/api/categories";
+  "https://certifieringsprov-bibliotek-backend.onrender.com/api/library-items";
 
 export async function borrowLibraryItem(id: string, borrower: string) {
   return axios.post<LibraryItem>(`${API_BASEURL}/${id}/borrow`, {
