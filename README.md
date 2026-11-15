@@ -1,75 +1,89 @@
-# React + TypeScript + Vite
+# Library Management System – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend application developed as part of the practical Full Stack Developer certification project at Intensive Code.
 
-Currently, two official plugins are available:
+The application provides a user interface for managing a library system, including library categories, library items, and borrowing operations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Create, update, and delete library categories
+- Create, update, and delete library items
+- Support for four library item types:
+  - Books
+  - Reference Books
+  - DVDs
+  - Audiobooks
+- Manage borrowing and returning of library items
+- Display library item information
+- Form validation
+- Communication with the backend API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- Axios
+- Zod
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Backend Integration
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The frontend communicates with a separate backend application responsible for API operations, database management, and application logic.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
 
+- Node.js
+- npm
+- The corresponding backend application
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone YOUR_FRONTEND_REPOSITORY_URL
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+2. Navigate to the project directory:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd YOUR_FRONTEND_PROJECT_FOLDER
 ```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Configure the backend API connection according to the project setup.
+
+### Running the Project
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build the project:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Project Information
+
+**Project Type:** Practical Certification Project
+
+**Education:** Intensive Code – Full Stack Developer
+
+**Focus:** Frontend development, API integration, user interface development, and data validation.
